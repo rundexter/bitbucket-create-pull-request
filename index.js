@@ -110,15 +110,17 @@ module.exports = {
      * @param {AppData} dexter Container for all data used in this workflow.
      */
     run: function(step, dexter) {
-        var auth = this.authParams(dexter),
-            formData = this.formData(step),
-            owner = step.input('owner').first(),
-            repo_slug = step.input('repo_slug').first();
-
-        var uriLink = 'repositories/' + owner + '/' + repo_slug + '/pullrequests';
+        var auth = this.authParams(dexter);
 
         // check params.
         if (!this.checkCorrectParams(auth, step)) return;
+
+        var formData = this.formData(step),
+            owner = step.input('owner').first().trim(),
+            repo_slug = step.input('repo_slug').first().trim();
+
+        var uriLink = 'repositories/' + owner + '/' + repo_slug + '/pullrequests';
+
         //send API request
         request.post({url: uriLink, body: formData, auth: auth, json: true}, function (error, response, body) {
 
