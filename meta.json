@@ -4,23 +4,69 @@
 {
     //Required. Inputs the module expects.
     "inputs": [
-        //e.g.
-        /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "owner",
+            "title":"Owner"
+        },
+        {
+            "id": "repo_slug",
+            "title":"Repo Slug"
+        },
+        {
+            "id": "title",
+            "title":"Title"
+        },
+        {
+            "id": "description",
+            "title":"Description"
+        },
+        {
+            "id": "resource_name",
+            "title":"Source Branch Name"
+        },
+        {
+            "id": "resource_full_name",
+            "title":"Source Full Name"
+        },
+        {
+            "id": "destination_name",
+            "title":"Destination Branch Name"
+        },
+        {
+            "id": "destination_hash",
+            "title":"Destination Commit Hash"
+        },
+        {
+            "id": "reviewers",
+            "title":"Reviewers"
         }
-        */
     ],
     //Required. Outputs the module emits.
     "outputs": [
-      //e.g.
-      /*
         {
-            "id": "from",
-            "title":"From"
+            "id": "title",
+            "title":"Title"
+        },
+        {
+            "id": "description",
+            "title":"Description"
+        },
+        {
+            "id": "source_branch",
+            "title":"Source Branch"
+        },
+        {
+            "id": "source_repository",
+            "title":"Repository"
+        },
+        {
+            "id": "destination_branch",
+            "title":"Destination Branch"
+        },
+        {
+            "id": "reviewers_username",
+            "title":"Reviewers Username"
         }
-      */
     ],
     "title": "Bitbucket Create New Pull Request" /* Required.A display name for the module */
 }

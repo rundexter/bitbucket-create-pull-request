@@ -62,8 +62,12 @@ module.exports = _.merge({
              * You should update this section with some test input for testing your module
              */
             input: {
-                //Replace VAR1 with the name of an expected input, and add more inputs as needed.
-                VAR1: 'foo'
+                owner: 'owner',
+                repo_slug: 'dexter-modules',
+                title: 'title',
+                resource_name: 'new-branch',
+                destination_name: 'master'
+
             }
         }
     }
