@@ -47,8 +47,7 @@ module.exports = {
 
         var uriLink = 'repositories/' + inputs.owner + '/' + inputs.repo_slug + '/pullrequests';
         //send API request
-        console.log(uriLink, _.omit(inputs, ['owner', 'repo_slug']));
-        request.post({ 
+        request.post({
             uri: uriLink, 
             body: _.omit(inputs, ['owner', 'repo_slug']), 
             oauth: credentials,
