@@ -68,6 +68,9 @@
             "title":"Reviewers Username"
         }
     ],
+    "providers": [{
+        "name": "bitbucket"
+    }],
     "icon": "bitbucket",
     "title": "Bitbucket Create New Pull Request" /* Required.A display name for the module */
 }
